@@ -1,0 +1,77 @@
+!! Credits https://addy-dclxvi.github.io/post/configuring-urxvt/
+!! Colorscheme
+*.foreground: #CDDBE7
+*.background: #0A1215
+*.cursorColor: #CDDBE7
+
+*.color0: #0A1215
+*.color1: #40768F
+*.color2: #638FA4
+*.color3: #69A3C9
+*.color4: #9DA99F
+*.color5: #AEB9B9
+*.color6: #EBCCA9
+*.color7: #CDDBE7
+*.color8: #8F99A1
+*.color9: #40768F
+*.color10: #638FA4
+*.color11: #69A3C9
+*.color12: #9DA99F
+*.color13: #AEB9B9
+*.color14: #EBCCA9
+*.color15: #CDDBE7
+
+rofi.color-window: #0a1215, #0a1215, #0a1215 
+rofi.color-normal: #0a1215, #e2e9f0, #0a1215, #062a41, #e2e9f0 
+!rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3 
+!rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+rofi.fullscreen: true
+rofi.lines: 5
+rofi.columns: 3
+rofi.font: Monospace 14
+rofi.bw: 0
+rofi.padding: 100
+
+rofi.eh: 1
+rofi.hide-scrollbar: true
+
+!! URXVT appearance
+! Fonts
+URxvt.font: xft:Hack-Regular:pixelsize=16,xft:Symbola
+URxvt.boldFont: xft:Hack-Bold:pixelsize=16:weight=bold,xft:Symbola
+URxvt.italicFont: xft:Hack-RegularOblique:pixelsize=16:slant=italic,xft:Symbola
+
+! Window
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+
+URxvt.perl-ext-common: fullscreen,matcher,url-select,keyboard-select,resize-font
+
+! keyboard select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: linkhandler
+URxvt.url-select.underline: true
+
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger: C-k
+
+!! keybindings
+! Scrolling
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+
+! Disable stupid installation keybindings
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+
+! Copy/Paste
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
